@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/panagiotisvourtsis/Documents/quizbeat/qbLive/node_modules/react-native-nodemediaclient/android/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/panagiotisvourtsis/Documents/quizbeat/qbLive/node_modules/react-native-nodemediaclient/android/src/release/jniLibs"/></dataSet></merger>

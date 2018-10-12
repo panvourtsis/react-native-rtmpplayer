@@ -31,7 +31,18 @@ public class NodePlayerViewManager extends SimpleViewManager<RCTNodePlayerView> 
     private static final String COMMAND_STOP_NAME = "stop";
 
     public NodePlayerViewManager(ReactApplicationContext reactContext) {
-        view = new RCTNodePlayerView(reactContext);
+        Handler mainHandler = new Handler(reactContext.getMainLooper());
+        mainHandler.post(new Runnable() {
+            ReactApplicationContext reactContext;
+            @Override
+            public void run() {
+                view = new RCTNodePlayerView(reactContext);
+            }
+            public Runnable init(ReactApplicationContext reactContextTemp) {
+                this.reactContext = reactContextTemp;
+                return(this);
+            }
+        }.init(reactContext));
     }
 
     @Override
